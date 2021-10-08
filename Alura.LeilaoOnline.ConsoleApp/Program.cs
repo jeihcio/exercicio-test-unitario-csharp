@@ -11,6 +11,18 @@ namespace Alura.LeilaoOnline.ConsoleApp
             LeilaoComApenasUmLance();
         }
 
+        private static void Verifica(double esperado, double obtido)
+        {
+            if (esperado == obtido)
+            {
+                Console.WriteLine("TESTE PASSOU");
+            }
+            else
+            {
+                Console.WriteLine($"TESTE FALHOU! Esperado: ${esperado}, obtido: {obtido}");
+            }
+        }
+
         private static void LeilaoComApenasUmLance()
         {
             // Arranjo - cenário
@@ -26,14 +38,7 @@ namespace Alura.LeilaoOnline.ConsoleApp
             var valorEsperado = 800;
             var valorObtido = leilao.Ganhador.Valor;
 
-            if (valorEsperado == valorObtido)
-            {
-                Console.WriteLine("TESTE PASSOU");
-            }
-            else
-            {
-                Console.WriteLine("TESTE FALHOU");
-            }
+            Verifica(valorEsperado, valorObtido);
         }
 
         private static void LeilaoComVariosLances()
@@ -55,14 +60,7 @@ namespace Alura.LeilaoOnline.ConsoleApp
             var valorEsperado = 1000;
             var valorObtido = leilao.Ganhador.Valor;
 
-            if (valorEsperado == valorObtido)
-            {
-                Console.WriteLine("TESTE PASSOU");
-            }
-            else
-            {
-                Console.WriteLine("TESTE FALHOU");
-            }
+            Verifica(valorEsperado, valorObtido);
         }
     }
 }
