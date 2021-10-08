@@ -22,7 +22,7 @@ namespace Alura.LeilaoOnline.ConsoleApp
             else
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                Console.WriteLine($"TESTE FALHOU! Esperado: ${esperado}, obtido: {obtido}");
+                Console.WriteLine($"TESTE FALHOU! Esperado: {esperado}, obtido: {obtido}");
             }
 
             Console.ForegroundColor = cor;
