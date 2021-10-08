@@ -15,10 +15,12 @@ namespace Alura.LeilaoOnline.ConsoleApp
         {
             if (esperado == obtido)
             {
+                Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("TESTE PASSOU");
             }
             else
             {
+                Console.ForegroundColor = ConsoleColor.Red;
                 Console.WriteLine($"TESTE FALHOU! Esperado: ${esperado}, obtido: {obtido}");
             }
         }
