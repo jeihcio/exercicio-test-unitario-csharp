@@ -18,6 +18,7 @@ namespace Alura.LeilaoOnline.Tests
             var fulano = new Interessada("Fulano", leilao);
 
             // Act - método sob teste
+            leilao.IniciaPregao();
             foreach (var valor in ofertas)
             {
                 leilao.RecebeLance(fulano, valor);
@@ -36,6 +37,7 @@ namespace Alura.LeilaoOnline.Tests
             var leilao = new Leilao("Van Gogh");
 
             // Act - método sob teste
+            leilao.IniciaPregao();
             leilao.TerminaPregao();
 
             // Assert 
