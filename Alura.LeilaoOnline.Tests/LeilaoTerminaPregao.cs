@@ -46,17 +46,11 @@ namespace Alura.LeilaoOnline.Tests
             //Arrange - cenário
             var leilao = new Leilao("Van Gogh");
 
-            try
-            {
-                //Act - método sob teste
-                leilao.TerminaPregao();
-                Assert.True(false);
-            }
-            catch (System.Exception e)
-            {
-                //Assert
-                Assert.IsType<System.InvalidOperationException>(e);
-            }
+            //Assert
+            Assert.Throws<System.InvalidOperationException>(
+                // Act - método sob teste
+                () => leilao.TerminaPregao()
+            );
         }
 
         [Fact]
