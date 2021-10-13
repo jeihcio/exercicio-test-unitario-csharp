@@ -58,6 +58,7 @@ namespace Alura.LeilaoOnline.Tests
         {
             // Arranjo - cenário
             var leilao = new Leilao("Van Gogh");
+            leilao.IniciaPregao();
 
             // Act - método sob teste
             leilao.TerminaPregao();
